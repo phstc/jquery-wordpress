@@ -57,6 +57,6 @@ The server-side version of this plugin will have advantages (SEO, server-side ca
 
 You’re welcome to make your contributions and send them as a pull request or just send me a message http://pablocantero.com/blog/contato/ 
 
-=== Contributors
+== Contributors
 
 Contributors? Hello? Hi?

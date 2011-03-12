@@ -1,0 +1,56 @@
+= jQuery WordPress Plugin
+
+== Why?
+
+If you like WordPress, but you don't like WordPress PHP templates or you don't want to learn about it, you known the why
+
+This plugin was developed to use the greats functionalities available on WordPress (posts, pages, categories, tags and comments) skipping the creation of WordPress PHP templates
+
+Using this plugin you can interact your WordPress with your plain-basic-simple-used-on-your-entire-life HTML
+
+== How it works?
+
+This plugin uses jQuery, QUnit, QUnit-mock and WordPress JSON API (http://wordpress.org/extend/plugins/json-api/other_notes/)
+
+=== Import script dependencies 
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="https://github.com/phstc/jquery-wordpress/raw/master/src/jquery.wordpress.js"></script>
+
+=== Initialize
+
+  var blog = WP.open('http://pablocantero.com/blog/');
+
+==== Find post by slug
+  blog.posts().findBySlug('jquery-plugin-javascript-for-java-util-date-tostring-format', function(post){
+    $('#posts').html(post.content);
+  });
+
+==== Find pages
+
+  blog.tags().all(function(tags){
+    $('#tags').html('');
+    var ul = $('<ul></ul>');
+    for(var i = 0; i < tags.length; i++){
+      ul.append('<li>' + tags[i].title + '</li>');
+    }
+    $('#tags').append(ul);
+  });
+
+// TODO add more examples
+
+== API
+
+// TODO describe the API
+
+== Test
+
+To execute the Test suite, just open jquery.wordpress-test.html in your browser. The tests were developed with http://docs.jquery.com/Qunit
+
+== Do you want to improve the jQuery WordPress Plugin
+
+You’re welcome to make your contributions and send them as a pull request or just send me a message http://pablocantero.com/blog/contato/ 
+
+=== Contributors
+
+Contributors? Hello? Hi?

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="src/jquery.wordpress.js"></script>	
+	<script>
+	/*
+	@pablocantero
+	http://pablocantero.com
+	https://github.com/phstc/jquery-wordpress/
+	https://gist.github.com/
+	*/
+	// $(document).ready(function(){
+		var blog = WP.open('http://pablocantero.com/blog/');
+		blog.posts().findBySlug('jquery-plugin-javascript-for-java-util-date-tostring-format', function(post){
+			$('#posts').html(post.content);
+		});
+		blog.pages().findBySlug('contato', function(page){
+			$('#pages').html(page.content);
+		});
+		blog.categories().all(function(categories){
+			$('#categories').html('');
+			var ul = $('<ul></ul>');
+			for(var i = 0; i < categories.length; i++){
+				ul.append('<li>' + categories[i].title + '</li>');
+			}
+			$('#categories').append(ul);
+		});
+		blog.tags().all(function(tags){
+			$('#tags').html('');
+			var ul = $('<ul></ul>');
+			for(var i = 0; i < tags.length; i++){
+				ul.append('<li>' + tags[i].title + '</li>');
+			}
+			$('#tags').append(ul);
+		});
+	// });
+	</script>
+	<style>
+		#categories {
+			border: 2px solid #000;
+			background-color: #FFF;
+		}
+		#tags {
+			border: 2px solid #000;
+			background-color: #CFC;
+		}
+		#posts {
+			border: 2px solid #000;
+			background-color: #FFF;
+		}
+		#pages {
+			border: 2px solid #000;
+			background-color: #CFC;
+		}
+	</style>
+</head>
+<body>
+	<div id="categories">
+		Loading categories
+	</div>
+	<div id="tags">
+		Loading tags
+	</div>
+	<div id="posts">
+		Loading posts
+	</div>
+	<div id="pages">
+		Loading pages
+	</div>
+</body>
+</html>

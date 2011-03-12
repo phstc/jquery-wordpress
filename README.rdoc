@@ -17,7 +17,7 @@ This plugin uses jQuery, QUnit, QUnit-mock and WordPress JSON API (http://wordpr
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript" src="https://github.com/phstc/jquery-wordpress/raw/master/src/jquery.wordpress.js"></script>
 
-=== Initialize
+=== Initialize the plugin
 
   var blog = WP.open('http://pablocantero.com/blog/');
 

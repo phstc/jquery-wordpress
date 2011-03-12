@@ -47,6 +47,12 @@ This plugin uses jQuery, QUnit, QUnit-mock and WordPress JSON API (http://wordpr
 
 To execute the Test suite, just open jquery.wordpress-test.html in your browser. The tests were developed with http://docs.jquery.com/Qunit
 
+== Next steps 
+
+Rewrite this plugin in others languages, I will starting soon in Ruby to it use as GEM
+
+The server-side version of this plugin will have advantages (SEO, server-side cache) comparing JavaScript
+
 == Do you want to improve the jQuery WordPress Plugin
 
 You’re welcome to make your contributions and send them as a pull request or just send me a message http://pablocantero.com/blog/contato/ 

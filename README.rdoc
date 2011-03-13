@@ -12,6 +12,10 @@ Using this plugin you can interact your WordPress with your plain-basic-simple-u
 
 This plugin uses jQuery, QUnit, QUnit-mock and WordPress JSON API (http://wordpress.org/extend/plugins/json-api/other_notes/)
 
+=== Add JSON API 
+
+Go to http://wordpress.org/extend/plugins/json-api/ and install the plugin JSON API
+
 === Import script dependencies 
 
   <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -55,7 +59,7 @@ The server-side version of this plugin will have advantages (SEO, server-side ca
 
 == Do you want to improve the jQuery WordPress Plugin
 
-You’re welcome to make your contributions and send them as a pull request or just send me a message http://pablocantero.com/blog/contato/ 
+You're welcome to make your contributions and send them as a pull request or just send me a message http://pablocantero.com/blog/contato/ 
 
 == Contributors
 

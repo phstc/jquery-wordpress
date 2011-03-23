@@ -23,7 +23,7 @@ var WP = {
 						});
 					}, 
 					findBySlug: function(slug, callback){
-						var url = blogUrl + '/blog/api/get_post/'
+						var url = blogUrl + '/api/get_post/'
 						url += '?slug=' + slug + '&callback=?'; 
 						$.getJSON(url, function(data) {
 							 callback(data.post);
@@ -43,7 +43,7 @@ var WP = {
 			pages: function(){
 				var publicMethods = {
 					findBySlug: function(slug, callback){
-						var url = blogUrl + '/blog/api/get_page/';
+						var url = blogUrl + '/api/get_page/';
 						url += '?slug=' + slug + '&callback=?'; 
 						$.getJSON(url, function(data) {
 							 callback(data.page);
@@ -55,8 +55,9 @@ var WP = {
 			categories: function(){
 				var publicMethods = {
 					all: function(callback){
-						var url = blogUrl + '/blog/api/get_category_index/';
+						var url = blogUrl + '/api/get_category_index/';
 						url += '?callback=?'; 
+						alert(url);
 						$.getJSON(url, function(data) {
 							 callback(data.categories);
 						});								
@@ -67,7 +68,7 @@ var WP = {
 			tags: function(){
 				var publicMethods = {
 					all: function(callback){
-						var url = blogUrl + '/blog/api/get_tag_index/';
+						var url = blogUrl + '/api/get_tag_index/';
 						url += '?callback=?'; 
 						$.getJSON(url, function(data) {
 							 callback(data.tags);
@@ -79,7 +80,7 @@ var WP = {
 			comments: function(){
 				var publicMethods = {
 					create: function(comment, callback){
-						var url = blogUrl + '/blog/api/submit_comment/';
+						var url = blogUrl + '/api/submit_comment/';
 						url += '?post_id=' + comment.postId + '&name=' + comment.name + '&email=' + comment.email + '&content=' + comment.content + '&callback=?'; 
 						$.getJSON(url, function(data) {
 							 callback(data);

@@ -57,7 +57,6 @@ var WP = {
 					all: function(callback){
 						var url = blogUrl + '/api/get_category_index/';
 						url += '?callback=?'; 
-						alert(url);
 						$.getJSON(url, function(data) {
 							 callback(data.categories);
 						});								
